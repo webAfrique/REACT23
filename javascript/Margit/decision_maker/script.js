@@ -2,6 +2,7 @@ const message_container = document.querySelector('.message-container')
 const user_input = document.querySelector('input[type="text"]')
 const send_btn = document.querySelector('.send')
 send_btn.addEventListener('click', chatController)
+let timeOfLastPost = 0
 
 
 
@@ -10,6 +11,7 @@ function postMsg(text, author){
     message.textContent = text
     message.classList.add(`${author}-message`)
     message_container.appendChild(message)
+    timeOfLastPost = 0
 }
 
 function initiateChat() {
@@ -87,6 +89,20 @@ function chatController(){
 }
 
 initiateChat()
+
+//start idle time counter
+setInterval(() => {
+    timeOfLastPost += 1
+}, 1000)
+
+//do this every 10 seconds
+setInterval(() => {
+
+    if ( timeOfLastPost >= 10 ){
+        postMsg('Are you still there?', 'bot')
+    }
+    
+}, 10000)
 
 
 
