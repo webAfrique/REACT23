@@ -29,6 +29,7 @@ body {
 }
 
 .logo h3 {
+    margin-top: 10px;
     font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: #888;
