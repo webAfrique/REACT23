@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,200;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span class="pizza-font">Pizza</span>
+        <br />
+        Pasila
+      </h1>
+      <div class="header-menu">
+        <div class="checkout">
+          <span class="total-price">€0.00</span>
+          <span class="fa fa-shopping-cart" style="font-size: 20px"></span>
+        </div>
+        <div class="login">
+          <span class="username"></span>
+          <img class="user-image" src="user.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <input
+      class="username-field"
+      type="text"
+      name=""
+      id=""
+      placeholder="enter your name"
+    />
+    <main>
+      <img class="hero-image" src="pizza1.avif" alt="" />
+      <form action="">
+        <fieldset class="servings">
+          <h3>Select Servings</h3>
+          <div class="row">
+            <input type="radio" name="servings" value="2" />
+            <div class="label">
+              <span>2 Servings</span>
+              <span>€7.50</span>
+            </div>
+          </div>
+          <div class="row">
+            <input type="radio" name="servings" value="4" />
+            <div class="label">
+              <span>4 Servings</span>
+              <span>€10.50</span>
+            </div>
+          </div>
+          <div class="row">
+            <input type="radio" name="servings" value="6" />
+            <div class="label">
+              <span>6 Servings</span>
+              <span>€12.50</span>
+            </div>
+          </div>
+          <div class="row">
+            <input type="radio" name="servings" value="8" />
+            <div class="label">
+              <span>8 Servings</span>
+              <span>€15.50</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="toppings">
+          <h3>Add Toppings</h3>
+          <div class="topping">
+            <span>Pepperoni</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Mushroom</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Extra cheese</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Sausage</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Onion</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Black olives</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Green pepper</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Fresh garlic</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Tomato</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <div class="topping">
+            <span>Fresh basil</span>
+            <input type="checkbox" name="" id="" />
+          </div>
+        </fieldset>
+
+        <fieldset class="delivery">
+          <h3>Delivery Options</h3>
+          <select name="delivery" id="">
+            <option value="eat-in">Eat in</option>
+            <option value="pickup">Pick up</option>
+            <option value="delivery">Home delivery</option>
+          </select>
+        </fieldset>
+      </form>
+    </main>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
