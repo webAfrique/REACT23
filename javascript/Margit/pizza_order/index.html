@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Montserrat font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--Roboto Mono (typwriter text in summary)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,200;0,400;1,100&family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <!--shopping cart icon in header-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,-25"
+    />
+    <!--user icon in header-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!--mouse pointer icon in hero section-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,-25"
+    />
+    <!--select icon in hero section-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0"
+    />
+    <!--delivery icon in hero section-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0"
+    />
+    <!--cutlery icon in hero section-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0"
+    />
+    <!--payment icon in summary-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,200"
+    />
+    <!--my css file-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span class="pizza-font">Pizza</span>
+        <br />
+        Pasila
+      </h1>
+      <div class="header-menu">
+        <div class="total-price">
+          <span class="show-price">€0.00</span>
+          <span class="material-symbols-outlined"> shopping_cart </span>
+        </div>
+        <div class="login">
+          <span class="username"></span>
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 2rem; color: #3f3f3f"
+          >
+            person
+          </span>
+          <!--<img class="user-image" src="user.png" alt="" />-->
+        </div>
+      </div>
+    </header>
+    <input
+      class="username-field"
+      onblur="showUser()"
+      type="text"
+      name=""
+      id=""
+      placeholder="enter your name and log in"
+    />
+    <div class="ui-container">
+      <img class="main-image" src="assets/pizza1.avif" alt="" />
+      <main>
+        <!--Homepage-->
+        <div class="hero">
+          <div class="hero-banner">
+            <h1>Three</h1>
+            <h1>
+              easy clicks
+              <sup class="material-symbols-outlined"> arrow_selector_tool </sup>
+            </h1>
+            <h1>to your plate!</h1>
+            <h1>
+              <span class="material-symbols-outlined"> fact_check </span>
+              <span class="material-symbols-outlined"> local_shipping </span>
+              <span class="material-symbols-outlined"> restaurant </span>
+            </h1>
+            <p>
+              Experience the perfect blend of flavors and textures in every bite
+              of our artisanal pizza creations.
+            </p>
+          </div>
+          <div class="cta">
+            <span class="login-btn" onclick="login()">log in</span>
+            <span class="proceed" onclick="navigate(home, orderForm)"
+              >Can't wait &#8594;</span
+            >
+          </div>
+        </div>
+        <!--order options page-->
+        <form action="" class="pizza-menu slide-in">
+          <fieldset class="servings">
+            <h3>Select Servings</h3>
+            <div class="row">
+              <input
+                type="radio"
+                name="servings"
+                value="2 Servings"
+                data-price="€7.50"
+              />
+              <div class="label">
+                <span>2 Servings</span>
+                <span>€7.50</span>
+              </div>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                name="servings"
+                value="4 Servings"
+                data-price="€10.50"
+              />
+              <div class="label">
+                <span>4 Servings</span>
+                <span>€10.50</span>
+              </div>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                name="servings"
+                value="6 Servings"
+                data-price="€12.50"
+              />
+              <div class="label">
+                <span>6 Servings</span>
+                <span>€12.50</span>
+              </div>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                name="servings"
+                value="8 Servings"
+                data-price="€15.50"
+              />
+              <div class="label">
+                <span>8 Servings</span>
+                <span>€15.50</span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="toppings">
+            <h3>Add Toppings</h3>
+            <div class="topping">
+              <span>Pepperoni</span>
+              <input type="checkbox" name="" id="" value="Pepperoni" />
+            </div>
+            <div class="topping">
+              <span>Mushroom</span>
+              <input type="checkbox" name="" id="" value="Mushroom" />
+            </div>
+            <div class="topping">
+              <span>Extra cheese</span>
+              <input type="checkbox" name="" id="" value="Extra cheese" />
+            </div>
+            <div class="topping">
+              <span>Sausage</span>
+              <input type="checkbox" name="" id="" value="Sausage" />
+            </div>
+            <div class="topping">
+              <span>Onion</span>
+              <input type="checkbox" name="" id="" value="Onion" />
+            </div>
+            <div class="topping">
+              <span>Black olives</span>
+              <input type="checkbox" name="" id="" value="Black olives" />
+            </div>
+            <div class="topping">
+              <span>Green pepper</span>
+              <input type="checkbox" name="" id="" value="Green pepper" />
+            </div>
+            <div class="topping">
+              <span>Fresh garlic</span>
+              <input type="checkbox" name="" id="" value="Fresh garlic" />
+            </div>
+            <div class="topping">
+              <span>Tomato</span>
+              <input type="checkbox" name="" id="" value="Tomato" />
+            </div>
+            <div class="topping">
+              <span>Fresh basil</span>
+              <input type="checkbox" name="" id="" value="Fresh basil" />
+            </div>
+          </fieldset>
+          <fieldset class="delivery">
+            <h3>Choose delivery Options</h3>
+            <select name="delivery" id="">
+              <option value="eat-in">Eat in</option>
+              <option value="pickup">Pick up</option>
+              <option value="delivery">Home delivery</option>
+            </select>
+          </fieldset>
+          <nav>
+            <a href="#" onclick="navigate(orderForm, home)">&#8249; Prev</a>
+            <a href="#" onclick="navigate(orderForm, checkout)">Next &#8250;</a>
+          </nav>
+        </form>
+        <!--Checkout page-->
+        <div class="order-summary slide-in">
+          <h1>Your order</h1>
+          <ul class="summary"></ul>
+          <div
+            class="checkout-btn"
+            onclick="navigate(checkout, endTransaction)"
+          >
+            <span class="material-symbols-outlined"> payments </span>
+            <span class="show-price">€0.00</span>
+          </div>
+          <nav>
+            <a href="#" onclick="navigate(checkout, orderForm)">&#8249; Prev</a>
+            <a href="#" onclick="navigate(checkout, endTransaction)"
+              >Next &#8250;</a
+            >
+          </nav>
+        </div>
+
+        <!--Thank you page-->
+        <!--svg check animation-->
+        <div class="thank-you slide-in">
+          <svg
+            width="115px"
+            height="115px"
+            viewBox="0 0 133 133"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              id="check-group"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <circle
+                id="filled-circle"
+                fill="coral"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <circle
+                id="white-circle"
+                fill="#FFFFFF"
+                cx="66.5"
+                cy="66.5"
+                r="55.5"
+              />
+              <circle
+                id="outline"
+                stroke="coral"
+                stroke-width="4"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <polyline
+                id="check"
+                stroke="#FFFFFF"
+                stroke-width="5.5"
+                points="41 70 56 85 92 49"
+              />
+            </g>
+          </svg>
+          <h1>hyvää ruokahalua</h1>
+          <nav>
+            <a href="#" onclick="navigate(endTransaction, checkout)"
+              >&#8249; Prev</a
+            >
+            <a href="#" onclick="navigate(endTransaction, home)">Done</a>
+          </nav>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
